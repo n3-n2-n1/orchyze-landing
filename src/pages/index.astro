@@ -1,8 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-  </head>
-  <body>
-    <!-- Redirige a /public/index.html -->
-  </body>
-</html>
+---
+export async function get() {
+  return {
+    status: 302, // Redirección temporal
+    headers: {
+      Location: '/index.html', // Ruta de destino
+    },
+  };
+}
+---
